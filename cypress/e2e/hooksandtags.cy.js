@@ -1,0 +1,60 @@
+//Hooks
+
+// before
+//after
+//beforeEach
+//AfterEach
+
+//annotation can be written anywhere in the code.
+
+//before running all test - use before.
+//before each test - use beforeeach.
+//same for after and aftereach.
+
+//tags are only, skip.
+
+describe('MyTestSuite', ()=>{
+   
+    before(()=>{
+        cy.log("*****   Launch app  ******");
+
+    })
+
+    after(()=>{
+
+        cy.log("*******    close App  ******");
+
+    })
+    
+
+    beforeEach(()=>{
+
+        cy.log("*******   Login  ******");
+
+    })
+
+    afterEach(()=>{
+
+        cy.log("*****   Logout    ");
+
+    })
+    
+    it('search', ()=> {
+
+        cy.log("*****   searching  ******");
+
+    })
+      
+    it.skip('advanced search', ()=> {
+
+        cy.log("*****   advanced searching  ******");
+    })
+  
+  
+    it.only('listing Products', ()=> {
+
+        cy.log("*****  Listing products  ******");
+    })
+  
+          
+})
